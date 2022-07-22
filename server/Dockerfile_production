@@ -1,0 +1,6 @@
+FROM node:18.4
+WORKDIR /demo_project_server
+COPY . .
+RUN npm install  
+CMD ["npm", "run", "start:server"]
+EXPOSE 8080

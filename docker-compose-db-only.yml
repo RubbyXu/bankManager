@@ -1,0 +1,12 @@
+version: "2"
+services:
+  mongodb:
+    image : mongo
+    container_name: mongodb
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./mongodata:/data/db
+    ports:
+      - 27017:27017
